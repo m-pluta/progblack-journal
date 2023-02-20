@@ -55,3 +55,79 @@ Now that the project was decided, we established a relatively clear plan of acti
 Now that we had a plan and goals, we decided to create an organisation on GitHub and we named it [LMC-Enjoyers](https://github.com/LMC-Enjoyers). 
 
 We finished off our meeting and agreed that next week's focus should be on learning TypeScript.
+
+# **Week 3** \~ 13/02 - 19/02
+
+I started the week by starting to learn TypeScript.
+My first google search was 'learn typescript' and it led me to a free [codeacademy](https://www.codecademy.com/learn/learn-typescript) course which very quickly introduced me to the language.
+Things I learnt:
+- Basic syntax of TypeScript
+- How to transpile TS to JavaScript
+- Benefits of type-safety which was a familiar concept to me due to being proficient with Java.
+- Uses of the .tsconfig file
+- Parameter annotations
+- Return types
+- How to write documentation for TS functions
+
+Overall this course was quite nice, but it felt like the learning was too slow so didnt end up finishing it. It felt much like a playground for learning TS in a fun way.
+
+I decided to switch up the pace by going to the official [TypeScript documentation](1https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-oop.html) which had a dedicated guide for people learning TS with a background in a statically typed language like Java.
+
+This was actually a really interesting read, and it highlighted two main things:
+- TypeScript treats types as sets of values that share something in common
+- The type system is fully erased at runtime.
+
+e.g. If you had two interfaces and two log functions:
+```TypeScript
+interface Car {
+    speed: number;
+    wheels: number;
+}
+
+interface Bird {
+    name: string:
+    wings: number;
+}
+
+function logCar(c: Car) {
+  console.log("speed = " + c.speed + ", wheels = " + c.wheels);
+}
+ 
+function logBird(b: Bird) {
+  console.log("name = " + b.name + ", wings = " + b.wings);
+}
+```
+and a custom object `obj`
+```TypeScript
+const obj = {
+    name: 'Boeing 737-700',
+    speed: 828,
+    wheels: 3,
+    wings: 2
+};
+```
+then these two function calls will surprisingly work
+```TypeScript
+logCar(obj);
+logBird(obj);
+```
+because `obj` has properties from both interfaces so it can be treated as those interfaces.
+
+> The relationships between types are determined by the properties they contain, not whether they were declared with some particular relationship.
+
+Additionally, if you had a class called `Car`
+```TypeScript
+class Car {
+    wheels: number;
+    speed: number;
+    drive() {
+    }
+}
+```
+then the result of calling
+```TypeScript
+typeof (new Car())
+```
+will be `"object"` and not `Car` or `"Car"`
+
+During the week, me and my team also updated our timeline to include what our current progress was and it was in line with our plan
