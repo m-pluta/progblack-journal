@@ -131,3 +131,19 @@ typeof (new Car())
 will be `"object"` and not `Car` or `"Car"`
 
 During the week, me and my team also updated our timeline to include what our current progress was and it was in line with our plan
+
+# **Week 4** \~ 20/02 - 26/02
+
+This week we created a git repo in our organisation and assigned each person their roles.
+
+We also met up on Wednesday for a short meeting and made a few key points:
+- Just learning Typescript is not enough
+- Decided to use a new framework - React
+- Switch from using a SQL server to SQLite which is more appropriate for a small project like ours and is more portable which allows for independent development.
+
+We created the group's repository in our organisation on Github and spent some time tweaking everyone's permissions so that changes would be made by create pull requests.
+
+We also collaborated together on a discord call and created a mockup of our UI/UX design for the website.
+![Mockup of UI/UX design](./assets/mockup.png)
+
+Next week, our plan is to start working on actually implementing this mockup using React and Typescript into a working prototype. This plan may be a bit ambitious though due to other coursework potentially affecting the workflow.
