@@ -147,3 +147,14 @@ We also collaborated together on a discord call and created a mockup of our UI/U
 ![Mockup of UI/UX design](./assets/mockup.png)
 
 Next week, our plan is to start working on actually implementing this mockup using React and Typescript into a working prototype. This plan may be a bit ambitious though due to other coursework potentially affecting the workflow.
+
+# **Week 5** \~ 27/02 - 02/03
+
+This week was busy just as expected, and not much was really done towards the project.
+I was mainly consumed by my CT coursework trying to optimise my SAT solver for the SAT race (which fortunately was very successful).
+
+Over the weekend a few people in my group started to work on the front-end implementation of the website, which turned out okay. The website matched 
+the mockup really well, but it was really unresponsive and didn't accomodate for different viewports at all. As a group we decided to postpone front-end for some time and to focus on other components of the app.
+
+In the next week I will focus on improving my knowledge in TypeScript and developing a way for our app to interact with a back-end SQLite database.
+
