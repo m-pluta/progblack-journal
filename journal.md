@@ -148,13 +148,29 @@ We also collaborated together on a discord call and created a mockup of our UI/U
 
 Next week, our plan is to start working on actually implementing this mockup using React and Typescript into a working prototype. This plan may be a bit ambitious though due to other coursework potentially affecting the workflow.
 
-# **Week 5** \~ 27/02 - 02/03
+# **Week 5** \~ 27/02 - 05/03
 
 This week was busy just as expected, and not much was really done towards the project.
 I was mainly consumed by my CT coursework trying to optimise my SAT solver for the SAT race (which fortunately was very successful).
 
-Over the weekend a few people in my group started to work on the front-end implementation of the website, which turned out okay. The website matched 
-the mockup really well, but it was really unresponsive and didn't accomodate for different viewports at all. As a group we decided to postpone front-end for some time and to focus on other components of the app.
+Over the weekend a few people in my group started to work on the front-end implementation of the website, which turned out okay. The website matched the mockup really well, but it was really unresponsive and didn't accomodate for different viewports at all. As a group we decided to postpone front-end for some time and to focus on other components of the app.
 
 In the next week I will focus on improving my knowledge in TypeScript and developing a way for our app to interact with a back-end SQLite database.
 
+# **Week 6** \~ 06/03 - 12/03
+
+This week was extremely busy due to 2 other assignments being due, but I found some time throughout the week and over the weekend to begin designing the website's database.
+
+I began by designing a model of the database using MySQL Workbench which I was familiar with from A-Level. This allowed me to quickly and efficiently design an ERM of the database
+
+This ERM included all the data fields that I thought our website would store and I proposed it to my group in our group chat. They proposed some small changes which I included in the final ERM:
+
+![Proposed Entity Relationship Model (ERM) of database design](./assets/model.png)
+
+Besides solidifying my skills in ERM design and using MySQL workbench, I also improved in effectively communicating with my group by explaining some of my design choices and listening to feedback.
+
+Nothing has really changed in relation to our group's goal of creating this website, but personally I think I would like to focus solely on one aspect of the website and improve my skills in the area as much as possible instead of learning how to do everything at a very low level.
+
+I think I will propose this idea to my group next week where we all split up and focus on different areas and then in the final weeks link everything together. Whilst proposing this idea, I believe I should underline the importance of us still communicating in order to still have a broad understanding of how everything is working otherwise we might face compatibility issues later down the road.
+
+Next week I will focus on implementing this ERM in SQLite with some very basic initial functionality.
