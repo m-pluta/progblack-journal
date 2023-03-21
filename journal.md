@@ -174,3 +174,24 @@ Nothing has really changed in relation to our group's goal of creating this webs
 I think I will propose this idea to my group next week where we all split up and focus on different areas and then in the final weeks link everything together. Whilst proposing this idea, I believe I should underline the importance of us still communicating in order to still have a broad understanding of how everything is working otherwise we might face compatibility issues later down the road.
 
 Next week I will focus on implementing this ERM in SQLite with some very basic initial functionality.
+
+# **Week 7** \~ 13/03 - 19/03
+
+I proposed my idea of working on separate areas of the project to my group and we all collectively agreed that it would be best.
+
+This week, I entirely focused on implementing the database in SQLite and writing some code to interact with the database.
+
+To do this, I had to install precompiled binaries from [SQLite](https://www.sqlite.org/download.html) and place extract them into my PATH directory.
+
+An issue I encountered early in the week was that my DDL (Data Definition Language) script was made for a MySQL server and not a SQLite database, hence there was a compatibility issue.
+
+My initial solution to this issue was to use a converter to create an equivalent SQLite database. I ended up using [DBConvert]ma were ever be updated then this process of converting w(https://dbconvert.com/mysql/sqlite/). This worked and the database was created, but it felt like a very 'tacky' solution. In theory, if the database scheould have to be done again.
+
+This method just 'felt' wrong and so I spent some time researching and found a Object Relational-Mapping package called [TypeORM](https://typeorm.io/), which not only made it super easy to create the database but also made connecting to it very easy. The rest of the week was spent researching the different features of this package and the most suitable implementation for our project.
+
+My personal goals for this project changed to:
+- Learning TypeScript to a comfortable level
+- Learning TypeORM
+- Producing clean, scalable and easily understandable code
+
+Next week I will focus on creating a basic implementation using TypeORM.
