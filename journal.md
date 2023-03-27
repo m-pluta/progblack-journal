@@ -195,3 +195,21 @@ My personal goals for this project changed to:
 - Producing clean, scalable and easily understandable code
 
 Next week I will focus on creating a basic implementation using TypeORM.
+
+# **Week 8** \~ 20/03 - 26/03
+
+This week I focused on using TypeORM to create an extremely basic implementation of the database working. I started off by reading some articles about how to get the implementation working and began creating entity models for each entity.
+
+The process of creating the entity models was quite repetitive as it was just copying the ERM into a TS representation so the whole process went quite smoothly.
+
+I also realised that the database needs to be initialised before it can be accessed and so I made an overall controller file to manage all the operations in the database.
+
+At this point in time I don't have any data in the database but I can add mock data at a later point in time when the methods for interacting with the database have been implemented.
+
+The goal for next week is start writing the remaining methods for interacting with the database.
+
+# **Week 9** \~ 27/03 - 02/04
+
+# **Week 10** \~ 03/04 - 09/04
+
+
