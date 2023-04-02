@@ -210,6 +210,28 @@ The goal for next week is start writing the remaining methods for interacting wi
 
 # **Week 9** \~ 27/03 - 02/04
 
+I started off the week by coming back to my code and realising that none of it was actually working. The issue was that since I had no data in my database, I falsely thought that my implementation was working as it was returning `{}` when I was querying all records in the database.
+
+I spent roughly the first two days this week just researching what the issue could be and eventually discovered that the articles I was using were outdated and were using deprecated methods. This led to compatibility issues.
+
+This was really demotivating and at one point I messaged my group asking for someone else to try and get a basic version of the database working just in case I don't get mine working in time.
+
+However, soon after messaging I had realised that TypeORM had official docs for the recommended way to use their library. In hindsight, this should've been the first thing I used but for some reason I went straight to articles.
+
+Following this silliness, I used the documentation to quickly get a working implementation created and it finally worked. I spent the remainder of the week trying to simplify my implementation and making sure the database is initialised correctly.
+
+The two main things I did were:
+- Create a `BaseController` class which every other controller would `extend` from which removed a lot of redundancy in the codebase. This is because all the controller had the similar base functionallity such as:
+    - Querying all records
+    - Inserting an record
+    - Fetching a specific record by ID
+    - etc.
+- Create a method called `ensureInitialisedDB` which would be run every time before executing any command on the database. This was done because the database initialisation is an asynchronous function and so it is important that the database finishes initialising before any operations are performed.
+
+I also created an example file of how to interact with the database. This would allow members of my group to start using the database in their sections of the codebase, mostly in the API.
+
+Next week I will focus on refining the database code and adding many more methods for interacting with the database. Most of these will be created according to what the API needs to function.
+
 # **Week 10** \~ 03/04 - 09/04
 
 
