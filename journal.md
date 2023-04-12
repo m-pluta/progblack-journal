@@ -234,4 +234,12 @@ Next week I will focus on refining the database code and adding many more method
 
 # **Week 10** \~ 03/04 - 09/04
 
+In this week, the main things I did were:
+- Refined the code to be more readable for all the members in my group.
+- Add more methods for interacting with the data in database
+- Create a `BaseEntity` class which all the other entities would `extend` from to reduce redundancy.
+- Create a few endpoints in the API.
 
+Most of this was really simple and I found it genuinely enjoyable, which was a nice change compared to the previous week.
+
+This week was quite uneventful for me since my part of the project was already done and fully working and so I spent the majority of the week helping out other members in my group link the backend to the frontend in the server.
