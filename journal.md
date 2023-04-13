@@ -28,7 +28,7 @@ We came up with more TypeScript-related ideas:
 We decided that the Mock banking system was the more promising project as it would involve a larger variety of technology.
 
 Once the project ideas was decided, we established a relatively clear plan:
-![](./assets/plan.png)
+![](./assets/journal/plan.png)
 
 ... and set some goals for our project:
 1. Learn TypeScript
@@ -74,7 +74,7 @@ We met up on Wednesday for a short meeting and raised a few key points:
 We created a git repo in our organization, assigned roles and updated everyone's permissions.
 
 We collaborated together on a discord call and created a mockup of the UI/UX design.
-![](./assets/mockup.png)
+![](./assets/journal/mockup.png)
 
 Our plan for next week is to create a working prototype of the frontend. Due to other coursework, this plan is quite ambitious.
 
@@ -84,11 +84,11 @@ This week was busy for me as expected, so I couldn't do much towards the project
 
 Over the weekend, a few people in my group started to work on the front-end implementation of the website:
 
-![](./assets/v1.png)
+![](./assets/journal/v1.png)
 
 The website matched the mockup well, but it was unresponsive and didn't accommodate for different viewports :
  
-![](./assets/v1-viewport.png)
+![](./assets/journal/v1-viewport.png)
 
 We decided to postpone frontend development indefinitely to focus on other parts of the app.
 
@@ -100,7 +100,7 @@ Due to 2 other assignments, this week was extremely busy, but I found time over 
 
 I designed the database's ERM using MySQL Workbench. I showed it to my group and they proposed some small changes which I included in the final ERM:
 
-![](./assets/model.png)
+![](./assets/journal/model.png)
 
 Besides solidifying my skills in ERM design, I improved my communication skills by explaining my design choices and listening to feedback from my group.
 
