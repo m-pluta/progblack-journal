@@ -168,4 +168,14 @@ This week, I did the following:
 
 This week was quite simple and genuinely enjoyable, which is a nice change compared to last week.
 
-Since my part of the project was done, I spent the majority of the week helping out my group link the backend to the frontend.
+Since my part of the project was done, I spent the majority of the week helping my group link the backend to the frontend.
+
+# **Reflection**
+
+I have learnt many skills from this project, which include:
+- Planning, communication & organisation in a group
+- Creating a database for an application.
+- Writing simple, scalable code with very little redundancy.
+and most importantly learning TypeScript.
+
+These skills should be very useful in the future, furthermore, TypeScript has become quite a popular language, so I might need it in my career.
