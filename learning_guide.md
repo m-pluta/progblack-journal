@@ -29,7 +29,7 @@ Before we get started, it's important to have a basic understanding of two pivot
 - [freeCodeCamp.org Follow-along Youtube course](https://www.youtube.com/watch?v=HXV3zeQKqGY)
 [![](https://img.youtube.com/vi/HXV3zeQKqGY/maxresdefault.jpg)](https://www.youtube.com/watch?v=HXV3zeQKqGY)
 
-# Typescript (550 words)
+# Typescript
 
 As mentioned before, Typescript is a superset of Javascript. This means that all Javascript code is valid Typescript code. However, since TypeScript adds additional features, not all Typescript code is valid Javascript code. This is why having a basic understanding of Javascript helps when learning Typescript.
 
@@ -70,6 +70,16 @@ Most importantly, you should:
     
         npm install -g typescript
     in your terminal to install the TypeScript compiler globally.
+
+A tool that will prove to be very handy is an npm package called `ts-node`
+This package allows you to execute Typescript code without having to compile it first. To install it, run:
+
+    npm install -g ts-node
+
+Anytime you want to execute a Typescript file, you can do so by running:
+
+    ts-node <filename>
+
 
 ---
 
@@ -130,13 +140,114 @@ Basic example which implements a stack data structure using generics:
 
 Now that we have a basic understanding of TypeScript, we can begin to look at how to use it to connect to a database.
 
-
-
-# TypeORM (350 words)
+# TypeORM
 You may be wondering where the section for learning SQLite is. Conveniently, TypeORM has built in support for SQLite and so it will handle most of SQLite setup for us.
 
+To get started, the easiest and most detailed way is to use the [TypeORM documentation](https://typeorm.io/). Additionally, there is a TypeScript example project provided by TypeORM which can be found [here](https://github.com/typeorm/typescript-example).
 
-# Evaluation, Conclusion (130 words)
+I will outline the main steps required to get started with TypeORM and SQLite.
+
+1. Setup a blank TypeScript project, following the steps outlined in the [Using a local IDE](#using-a-local-ide) section.
+
+2. Install TypeORM, reflect-metadata, and SQLite driver
+
+        npm i typeorm --save
+
+3. Install reflect-metadata
+    
+        npm i reflect-metadata --save
+
+4. Install SQLite driver
+
+        npm i sqlite3 --save
+
+5. Install development dependencies
+
+        npm i --save-dev @types/node ts-node
+
+6. Setup your directory like this with `index.ts`, `data-source.ts`, `user.entity.ts` being empty files.
+![](./assets/learning-guide/7.svg)
+
+7. In your `tsconfig.json`, ensure the following settings are set:
+![](./assets/learning-guide/8.svg)
+
+Now that we have setup a bare-bones TypeORM project, we can create a database. This exemplar database will store user information. Each user has an auto-generated `id`, `username`, `password`, and `create_time` (the time the user was created).
+
+While basic, this database is enough to demonstrate the core functionality of TypeORM.
+
+In `user.entity.ts`, define the `User` entity like this:
+
+![](./assets/learning-guide/9.svg)
+
+The best practice is to have all entity files end in `.entity.ts` for organisation purposes.
+
+Note the use of [decorators](https://orkhan.gitbook.io/typeorm/docs/decorator-reference) (text prefixed by `@`) to define the table name and column names. This is a feature of TypeORM used define the structure of your database.
+
+Now we can create a database connection in `data-source.ts`:
+![](./assets/learning-guide/10.svg)
+
+This is my chosen place to import `reflect-metadata` as it is guaranteed to be imported before any database operations are performed.
+
+There may be other ways handle database initialisation, but my chosen method, is to create a function `ensureInitialisedDB`. This function will be called in `index.ts` before any requests are made.
+
+Finally, we can create a simple script to create a user, and fetch all users, in `index.ts`:
+
+![](./assets/learning-guide/11.svg)
+
+Note that the `await` keyword is used to wait for the asynchronous database operations to complete.
+
+A useful feature of TypeORM that you may have noticed from the above script is that once we have created the user, we can simple access the auto-generated `id` property of the `user`.
+
+To run the script, either transpile it using
+
+        tsc
+
+or if you have installed `ts-node`, use:
+
+    ts-node index.ts
+
+# Most common TypeORM issue
+    No metadata for "User" was found using TypeOrm
+
+or
+
+    Cannot execute operation on "default" connection because connection is not yet established.
+
+There are three main causes of this issue:
+- The database did not initialise in time before the first request was made. Remember it is an asynchronous process.
+- You have not imported the `reflect-metadata` package in the global place of your app, e.g. `index.ts`.
+- Entity paths are referecing the wrong file type. Try using:
+
+        entities: [__dirname + '/../**/*.entity.{js,ts}']
+
+    in your `data-source.ts` file.
+
+# Evaluation, Conclusion
+
+All three of the technologies we have looked at are very powerful with a lot of potential. Additionally they are very easy to learn given the amount of documentation available and resources provided in this guide.
+
+TypeScript is a language that is very quickly evolving, which is great, however it can be difficult to keep up with the changes. This is an issue often encountered on StackOverflow, where the accepted answer is often outdated, even though it was written quite recently.
+
+SQLite & TypeORM are both amazing tools, however they should not be your first choice when working on large scale applications. They are ideal for prototyping only. 
+
+## Alternatives
+
+There is no direct alternative to TypeScript, its a very versatile language and it solves a very specific issue in JavaScript which is type safety.
+
+Possible SQLite [alternatives](https://survey.stackoverflow.co/2022/#section-most-loved-dreaded-and-wanted-databases):
+- PostgreSQL
+- MongoDB
+- MySQL
+
+TypeORM alternatives:
+- Sequelize
+- Mongoose
+- LoopBack
+- Prisma
+- MikroORM
+
+Thank you for reading this guide. I hope you have found it useful.
+
 
 
 
