@@ -28,6 +28,7 @@ We came up with more TypeScript-related ideas:
 We decided that the Mock banking system was the more promising project as it would involve a larger variety of technology.
 
 Once the project ideas was decided, we established a relatively clear plan:
+
 ![](./assets/journal/plan.png)
 
 ... and set some goals for our project:
@@ -74,6 +75,7 @@ We met up on Wednesday for a short meeting and raised a few key points:
 We created a git repo in our organization, assigned roles and updated everyone's permissions.
 
 We collaborated together on a discord call and created a mockup of the UI/UX design.
+
 ![](./assets/journal/mockup.png)
 
 Our plan for next week is to create a working prototype of the frontend. Due to other coursework, this plan is quite ambitious.

@@ -23,11 +23,13 @@ It's important to have a basic understanding of two pivotal technologies. If the
 - [Free codeacademy course](https://www.codecademy.com/learn/introduction-to-javascript)
 - [W3schools tutorial guide](https://www.w3schools.com/js)
 - [freeCodeCamp.org Follow-along Youtube course](https://www.youtube.com/watch?v=PkZNo7MFNFg)
-[![](https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg)](https://www.youtube.com/watch?v=PkZNo7MFNFg)
+
+    [![](https://img.youtube.com/vi/PkZNo7MFNFg/maxresdefault.jpg)](https://www.youtube.com/watch?v=PkZNo7MFNFg)
 ## Databases
 - [W3schools tutorial guide](https://www.w3schools.com/sql)
 - [freeCodeCamp.org Follow-along Youtube course](https://www.youtube.com/watch?v=HXV3zeQKqGY)
-[![](https://img.youtube.com/vi/HXV3zeQKqGY/maxresdefault.jpg)](https://www.youtube.com/watch?v=HXV3zeQKqGY)
+
+    [![](https://img.youtube.com/vi/HXV3zeQKqGY/maxresdefault.jpg)](https://www.youtube.com/watch?v=HXV3zeQKqGY)
 
 # Typescript
 
@@ -131,9 +133,11 @@ Three additional key features that TypeScript unlocked for us are:
 These features are all very powerful, however they are beyond the scope of this guide and so will not be covered in detail.
 
 Basic example using interfaces and classes:
+
 ![](./assets/learning-guide/5.svg)
 
 Basic example which implements a stack data structure using generics:
+
 ![](./assets/learning-guide/6.svg)
 
 Now that we have a basic understanding of TypeScript, we can begin to look at how to use it to connect to a database.
@@ -156,10 +160,12 @@ I will outline the main steps required to get started with TypeORM and SQLite.
         npm i --save-dev @types/node ts-node
 
 4. Setup your directory like this:
+
 ![](./assets/learning-guide/7.svg)
 `index.ts`, `data-source.ts`, `user.entity.ts` are empty files.
 
 5. In your `tsconfig.json`, ensure the following settings are set:
+
 ![](./assets/learning-guide/8.svg)
 
 In our bare-bones TypeORM project, we can now create a database. This exemplar database will store user information. Each user has an auto-generated `id`, `username`, `password`, and `create_time` (the time the user was created).
@@ -175,6 +181,7 @@ The best practice is to have all entity files end in `.entity.ts` for organisati
 **Note** the use of [decorators](https://orkhan.gitbook.io/typeorm/docs/decorator-reference) (text prefixed by `@`) to define the table and column names. This is a feature of TypeORM for defining the structure of a database.
 
 Now we can create a database connection in `data-source.ts`:
+
 ![](./assets/learning-guide/10.svg)
 
 This is a good place to import `reflect-metadata` as it is guaranteed to be imported before any database operations are performed.
